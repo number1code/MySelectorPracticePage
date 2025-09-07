@@ -1,0 +1,109 @@
+/* ==========================================================================
+           1. INITIAL "BROKEN" & BASE STYLES
+           - This is the starting point. The page looks plain and unstyled.
+           - As you solve the problems, new styles will be applied via JavaScript,
+             overriding these base styles and making the page look "fancy".
+           ========================================================================== */
+        :root {
+            --dark-bg: #1a1a2e;
+            --light-text: #e0e0e0;
+            --accent-1: #16213e;
+            --accent-2: #0f3460;
+            --highlight: #e94560;
+            --success: #00ff7f; /* A bright green for success states */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: background-color 0.5s ease; /* Smooth transition for the final reveal */
+        }
+
+        header, main, footer {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .problem-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .problem-card h3 {
+            margin-top: 0;
+        }
+
+        /* The text area where users type their code */
+        .code-input {
+            width: 100%;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            margin-top: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+        }
+
+        .run-button {
+            margin-top: 10px;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* --- "Broken" Elements That Need Fixing --- */
+        #main-title {
+            font-size: 2rem; /* Incorrect size */
+            color: #000; /* Incorrect color */
+        }
+
+        #task-list-container li {
+            color: red; /* Let's say this is "wrong" */
+        }
+        
+        #interactive-button {
+            display: block;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            opacity: 0.1; /* Barely visible */
+        }
+
+        /* ==========================================================================
+           2. "FANCY" STYLES THAT WILL BE APPLIED WHEN PROBLEMS ARE SOLVED
+           - These styles are initially not applied or are overridden. The goal of
+             the exercise is to activate them.
+           ========================================================================== */
+        
+        /* The final state when all problems are solved */
+        body.all-solved {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+
+        /* Styling for a solved problem card */
+        .problem-card.solved {
+            border-color: var(--success);
+            background-color: var(--accent-1);
+        }
+
+        /* A special highlight class for one of the JS problems */
+        .highlight-card {
+            box-shadow: 0 0 15px var(--highlight);
+            transform: scale(1.02);
+        }
+
+        /* Styles for the "Run" buttons after being fixed */
+        .run-button-styled {
+            background-color: var(--highlight);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+        }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive DOM & CSS Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <h1 id="main-title">DOM & CSS Challenge</h1>
+    </header>
+
+    <main>
+        <!-- Problem 1: CSS Selector (ID) -->
+        <div class="problem-card" data-problem-id="1" data-type="css" data-solution="#main-header">
+            <h3>Problem 1: Select by ID</h3>
+            <p>The header background is plain. Write a CSS selector to target the element with the ID <code>main-header</code> to give it a background color.</p>
+            <textarea class="code-input" placeholder="Type your CSS selector here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 2: JavaScript (textContent) -->
+        <div class="problem-card" data-problem-id="2" data-type="js" data-solution="document.getElementById('main-title').textContent = 'DOM Challenge Solved!';">
+            <h3>Problem 2: Change Text Content</h3>
+            <p>The main title is incorrect. Write the line of JavaScript to select the H1 with the ID <code>main-title</code> and change its text to "DOM Challenge Solved!".</p>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 3: CSS Selector (Class) -->
+        <div class="problem-card" data-problem-id="3" data-type="css" data-solution=".problem-card">
+            <h3>Problem 3: Select by Class</h3>
+            <p>These problem cards are boring. Write a CSS selector to target all elements with the class <code>problem-card</code> to give them a new border and background.</p>
+            <textarea class="code-input" placeholder="Type your CSS selector here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 4: JavaScript (classList.add) -->
+        <div class="problem-card" id="card-to-highlight" data-problem-id="4" data-type="js" data-solution="document.getElementById('card-to-highlight').classList.add('highlight-card');">
+            <h3>Problem 4: Add a Class</h3>
+            <p>This specific card needs to stand out. Write the JS to select the element with the ID <code>card-to-highlight</code> and add the class <code>highlight-card</code> to it.</p>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 5: CSS Selector (Child Combinator) -->
+        <div class="problem-card" data-problem-id="5" data-type="css" data-solution="#task-list-container > li">
+            <h3>Problem 5: Select Direct Children</h3>
+            <p id="task-list-container">The list items below are red. Write a CSS selector to target only the `li` elements that are direct children of the element with the ID <code>task-list-container</code>. <ul><li>Task 1</li><li>Task 2</li><li>Task 3</li></ul></p>
+            <textarea class="code-input" placeholder="Type your CSS selector here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 6: JavaScript (style property) -->
+        <div class="problem-card" data-problem-id="6" data-type="js" data-solution="document.querySelector('input[placeholder*=`CSS`]').style.borderColor = 'var(--highlight)';">
+            <h3>Problem 6: Modify a Style</h3>
+            <p>Find the first input field on the page that has the word "CSS" in its placeholder text and change its border color. Write the single line of JS to do this.</p>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 7: CSS Selector (Attribute) -->
+        <div class="problem-card" data-problem-id="7" data-type="css" data-solution="input[type='text']">
+            <h3>Problem 7: Select by Attribute</h3>
+            <p>The text input fields look dated. Write a CSS selector to target all `input` elements with a `type` attribute of "text".</p>
+            <textarea class="code-input" placeholder="Type your CSS selector here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 8: JavaScript (createElement & append) -->
+        <div class="problem-card" data-problem-id="8" data-type="js" data-solution="const newItem = document.createElement('li'); newItem.textContent = 'A new item!'; document.getElementById('dynamic-list').append(newItem);">
+            <h3>Problem 8: Create and Append an Element</h3>
+            <p>The list below is incomplete. Write the JS to create a new `li` element, set its text to "A new item!", and append it to the `ul` with the ID <code>dynamic-list</code>.</p>
+            <ul id="dynamic-list"><li>First item</li></ul>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+        
+        <!-- Problem 9: CSS Selector (nth-child) -->
+        <div class="problem-card" data-problem-id="9" data-type="css" data-solution=".problem-card:nth-child(odd)">
+            <h3>Problem 9: Select with Pseudo-class</h3>
+            <p>To improve readability, let's give every odd-numbered problem card a slightly different style. Write a CSS selector to target the odd problem cards.</p>
+            <textarea class="code-input" placeholder="Type your CSS selector here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 10: JavaScript (addEventListener) -->
+        <div class="problem-card" data-problem-id="10" data-type="js" data-solution="document.getElementById('interactive-button').addEventListener('click', () => { alert('Button clicked!'); });">
+            <h3>Problem 10: Add an Event Listener</h3>
+            <p>The button below does nothing. Write the JS to add a 'click' event listener to the button with the ID <code>interactive-button</code> that shows an alert saying "Button clicked!".</p>
+            <button id="interactive-button">Click Me</button>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 11: JavaScript (querySelectorAll & loop) -->
+        <div class="problem-card" data-problem-id="11" data-type="js" data-solution="document.querySelectorAll('.run-button').forEach(button => button.classList.add('run-button-styled'));">
+            <h3>Problem 11: Select All and Loop</h3>
+            <p>All the "Apply Fix" buttons are plain. Write the JS to select all elements with the class <code>run-button</code> and loop through them to add the class <code>run-button-styled</code>.</p>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Problem 12: JavaScript (Final Reveal) -->
+        <div class="problem-card" data-problem-id="12" data-type="js" data-solution="document.querySelector('footer').style.opacity = 1;">
+            <h3>Problem 12: The Final Fix</h3>
+            <p>The footer is barely visible. Write the JS to select the `footer` element and change its opacity to 1.</p>
+            <textarea class="code-input" placeholder="Type your JS code here..."></textarea>
+            <button class="run-button">Apply Fix</button>
+            <div class="feedback"></div>
+        </div>
+        
+    </main>
+
+    <footer id="main-footer">
+        <p>Congratulations! You've fixed the page!</p>
+    </footer>
+</body>
+</html>
